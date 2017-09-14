@@ -1,0 +1,22 @@
+{
+  "name": "asssign1_rohank",
+  "version": "1.0.0",
+  "description": "web page with behaviour logging",
+  "main": "server.js",
+  "author": "Rohank Agarwal",
+  "license": "ISC",
+  "engines": {
+	"node": "4.6.0",
+	"npm": "2.15.9"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "mongodb": "*",
+    "morgan": "*",
+    "socket.io": "*"
+  }
+}

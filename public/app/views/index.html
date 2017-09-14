@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!--style sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    
+    <!--Angular files -->
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+
+    <!--controllers-->
+    <script src="app/controllers/userCtrl.js"></script>
+    <script src="app/controllers/mainCtrl.js"></script>
+    
+    <!--services-->
+    <script src="app/services/userServices.js"></script>
+    <script src="app/services/authServices.js"></script>
+
+    <title>Adaptive Web</title>
+
+   
+  </head>
+
+  <body ng-app="userApp" ng-controller="mainCtrl as main">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a  ng-show="!main.isLoggedin" href="/login">Login</a></li>
+            <li><a ng-show="!main.isLoggedin" href="/register" ng-click="main.userInteraction()">Register</a></li>
+            <li><a ng-show="main.isLoggedin" href="#" ng-click="main.logout();">Logout</a></li>
+            <li><a ng-show="main.isLoggedin" href="/profile">Hello {{main.username}}</a></li>
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h2>Welcome</h2>
+      </div>
+
+      <div ng-view></div>
+
+
+    </div> 
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+  </body>
+</html>

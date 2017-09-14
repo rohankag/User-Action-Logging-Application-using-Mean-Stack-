@@ -1,0 +1,75 @@
+<div class="page-header">
+	
+<h1> {{main.username}}'s Dashboard</h1>	
+</div>
+
+<div class="user-info">
+	
+	<div class="user-info-heading" style="text-align: center"><h2><strong>User Profile<strong></h2></div>
+	<h3>Username  : {{main.username}} </h3>
+    
+    <br>
+      Click <a href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15" target="_blank">here</a> to go to Stackoverflow Java tag page
+       <h3 style="color:red">Login History</h3>
+
+       <div id="" style="overflow:scroll; height:200px; width:600px;background-color: lightblue"">
+	<ul>{{main.logs}}<br>
+	
+	}
+   </ul> </div>
+
+
+
+    <br>
+    <br>
+
+    <h3 style="color:red">User Action History</h3>
+
+       <div id="" style="overflow:scroll; height:200px; width:600px;background-color: lightblue"">
+	<div id="DisplayTable"  >
+        <table style="width: 100%" align="left">
+            <tr>
+                <th>
+                    Event
+                </th>
+                <th>
+                    Timestamp
+                </th>
+            </tr>
+            <tr ng-repeat="x in main.actions">
+                <td>{{x.eventtype}}</td>
+                <td>{{x.timestamp}}</td>
+            </tr>
+        </table>
+    </div>
+
+   </div>
+    <br>
+    <br>
+   <div id="Answer" style="overflow:scroll; height:200px; width:600px">
+   <strong style="color:green">Why do you decide to log these actions?</strong><br><br>
+   <p>These logs tell us about the user actions and behaviour on stack overflow page. For instance: click, voteup, vote down, share, scroll etc.
+   These logs can be used to analyse user's point of interest and time spent on different questions. The actions are decomposed as follows:</p> 
+   <ul>
+   	<li>Upvoted : Event triggered when user upvotes an answer</li>
+   	<li>Devoted : Event triggered when User Downvotes the answer</li>
+   	<li>comments: Event triggered when user clicks on add comment</li>
+   	<li>Share   : Event triggered when user clicks on share answer</li>
+   	<li>Search  : Event triggered when user clicks on search field</li>
+   	<li>Scroll  : Event triggered when user scrolls to the end of the page</li>
+   	<br>
+   	These logs can be used to recommend user his favourite questions on top or any other similar suggestions.
+
+   </ul>
+   </div>
+
+
+   
+
+    
+    </div>
+
+
+
+
+
