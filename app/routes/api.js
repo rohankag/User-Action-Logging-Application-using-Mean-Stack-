@@ -93,6 +93,50 @@ Log.find({username: req.body.username}).select('timestamp').exec(
    });
 
 
+    router.post('/actioncount',function(req,res){
+   var query = [{"$group": {_id: {username:"$username", action: "$eventtype"}, count: {$sum: 1}}}, { $sort : { _id: 1}}];
+   Action.aggregate(query).exec(
+        function(err,logs){
+    //  Log.find({username: req.body.username},function(err,logs){
+          if(err) throw (err);
+            
+             else{
+                res.json ({events : logs});
+              }
+            })
+        }); 
+
+    router.post('/totalactioncount',function(req,res){
+   Action.find({}).select('eventtype timestamp').exec(
+        function(err,logs){
+    //  Log.find({username: req.body.username},function(err,logs){
+          if(err) throw (err);
+            
+             else{
+                //for(a : timestamp)
+                //console.log("eventtype");
+                res.json ({events : logs});
+              }
+            })
+        }); 
+
+    router.post('/logcount',function(req,res){
+
+      var query = [{"$group": {_id: {user: "$username", year: {"$year": "$timestamp"}, month: {"$month": "$timestamp"},day: {"$dayOfMonth": "$timestamp"}}, count: {"$sum": 1 }}}, { $sort: { _id: 1}}];
+ //  var query = [{"$group": {_id: {username:"$username", action: "$eventtype"}, count: {$sum: 1}}}, { $sort : { _id: 1}}];
+   Log.aggregate(query).exec(
+        function(err,logs){
+    //  Log.find({username: req.body.username},function(err,logs){
+          if(err) throw (err);
+            
+             else{
+              console.log(logs);
+                res.json ({events : logs});
+              }
+            })
+        }); 
+
+
    router.post('/actionlog',function(req,res){
 
 Action.find({username: req.body.username}).select('eventtype timestamp').exec(

@@ -1,5 +1,4 @@
-<div class="page-header">
-	
+
 <h1> {{main.username}}'s Dashboard</h1>	
 </div>
 
@@ -7,6 +6,23 @@
 	
 	<div class="user-info-heading" style="text-align: center"><h2><strong>User Profile<strong></h2></div>
 	<h3>Username  : {{main.username}} </h3>
+   
+  
+  
+
+ 
+  
+<body>
+<h1 style= "text-align:center;font-family:verdana;font-size:200%;">User Operations frequency distribution</h1>
+<div id='dashboard'>
+</div>
+
+    
+  <!-- <div>{{main.data}}  {{main.labels}}</div>
+  <canvas id="pie" class="chart chart-pie"
+  chart-data="main.data" chart-labels="main.labels">
+</canvas>  -->
+
     
     <br>
       Click <a href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15" target="_blank">here</a> to go to Stackoverflow Java tag page
@@ -48,6 +64,7 @@
     <br>
    <div id="Answer" style="overflow:scroll; height:200px; width:600px">
    <strong style="color:green">Why do you decide to log these actions?</strong><br><br>
+
    <p>These logs tell us about the user actions and behaviour on stack overflow page. For instance: click, voteup, vote down, share, scroll etc.
    These logs can be used to analyse user's point of interest and time spent on different questions. The actions are decomposed as follows:</p> 
    <ul>
@@ -62,10 +79,65 @@
 
    </ul>
    </div>
+<script >
+     console.log("doing");
+//      jQuery(document).ready(function () {
 
+//     // Build the chart
+//     Highcharts.chart('chart-container', {
+//         chart: {
+//             plotBackgroundColor: null,
+//             plotBorderWidth: null,
+//             plotShadow: false,
+//             type: 'pie'
+//         },
+//         title: {
+//             text: 'Browser market shares January, 2015 to May, 2015'
+//         },
+//         tooltip: {
+//             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+//         },
+//         plotOptions: {
+//             pie: {
+//                 allowPointSelect: true,
+//                 cursor: 'pointer',
+//                 dataLabels: {
+//                     enabled: false
+//                 },
+//                 showInLegend: true
+//             }
+//         },
+//         series: [{
+//             name: 'Brands',
+//             colorByPoint: true,
+//             data: [{
+//                 name: 'Microsoft Internet Explorer',
+//                 y: 56.33
+//             }, {
+//                 name: 'Chrome',
+//                 y: 24.03,
+//                 sliced: true,
+//                 selected: true
+//             }, {
+//                 name: 'Firefox',
+//                 y: 10.38
+//             }, {
+//                 name: 'Safari',
+//                 y: 4.77
+//             }, {
+//                 name: 'Opera',
+//                 y: 0.91
+//             }, {
+//                 name: 'Proprietary or Undetectable',
+//                 y: 0.2
+//             }]
+//         }]
+//     });
+// });
+   </script>
 
+</body>
    
-
     
     </div>
 

@@ -6,7 +6,7 @@ angular.module('authServices',[])
     //User.create(regData);
     authFactory.login = function(loginData){
     	return $http.post('/api/authenticate', loginData).then(function(data){
-        console.log(data.data.token);
+      
         AuthToken.setToken(data.data.token);
         return data;
     	});
@@ -34,7 +34,7 @@ angular.module('authServices',[])
      
      console.log(loginData);
      return $http.post('/api/logs', loginData).then(function(data){
-        console.log("checked");
+        
         //AuthToken.setToken(data.data.token);
         return data;
       });
@@ -45,11 +45,42 @@ angular.module('authServices',[])
      
      //console.log(loginData);
      return $http.post('/api/actionlog', loginData).then(function(data){
-        console.log("checked");
         //AuthToken.setToken(data.data.token);
         return data;
       });
     };
+
+    authFactory.getTotalAction= function(loginData){
+     // return return $http.post('/api/me');
+     
+     //console.log(loginData);
+     return $http.post('/api/totalactioncount', loginData).then(function(data){
+        //AuthToken.setToken(data.data.token);
+        return data;
+      });
+    };
+
+    authFactory.getActioncount= function(loginData){
+     // return return $http.post('/api/me');
+     
+     //console.log(loginData);
+     return $http.post('/api/actioncount', loginData).then(function(data){
+        //AuthToken.setToken(data.data.token);
+        return data;
+      });
+    };
+
+    authFactory.getLogcount= function(loginData){
+     // return return $http.post('/api/me');
+     
+     //console.log(loginData);
+     return $http.post('/api/logcount', loginData).then(function(data){
+        //AuthToken.setToken(data.data.token);
+        return data;
+      });
+    };
+
+    
 
      authFactory.logout= function(){
           AuthToken.setToken();

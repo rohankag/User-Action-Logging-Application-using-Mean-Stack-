@@ -1,0 +1,87 @@
+<div class="user-info-heading" style="text-align: center"><h2><strong>User Profile<strong></h2></div>
+
+<h1 style= "text-align:center;font-family:verdana;font-size:200%;">User Operations frequency distribution</h1><br><br><br>
+<div><button id="mybutton" ng-click="myvalue = myvalue == true ? false : true;"><b><strong>Click here to view frequency distribution of all the other users</strong></b></button></div>
+
+
+<div id="container" style="margin: 0 auto"></div>
+<div class="hc-pie" class="pull-right" items="main.ideas"></div><br><br>
+
+
+
+        <div><div ng-show="myvalue" class="hideByDefault">
+
+<div id="container4" style="margin: 0 auto"></div>
+<div class="hc-pie4" items="main.ideas"></div>
+
+        </div></div>
+<br>
+<br>
+<div id="Answer" style="overflow:scroll; height:200px; width:600px">
+<p ><b>Purpose:</b><br>
+<ul>
+	<li>Display Frequency Distribution of actions of logger User</li>
+	<li>Display Frequency Distribution of actions of all users</li>
+	<li>Display Frequency Distribution of specific actions</li>
+	<li>Compare Frequency Distribution of different actions and users</li>
+
+</ul>
+<b>Analytics</b><br><br>
+From The pie chart it can be inferred what action a particular user was mostly engaged in. The chart tells us about the user action which mostly lies in comments, sharing, searching a particular question, upvoting a question as well as downvoting a question. The frequency of each action is mentioned in terms of percentage. This tells us about the pattern of frequency of actions for all the users of the application. We can analyse different actions by clicking on them which will enable/disable the result of that action on the pie chart.
+<br><br>
+<b>Interactions</b><br>
+<ul>
+	<li><b>Hover:</b> Display the frequency in terms of percentage of a particular user for a particular action on stack overflow page</li>
+	<li><b>click:</b> when we click on the action it hides the graph of that action to analyze individual action or other actions.</li>
+	<li>Button to View/Hide all user frequency distribution</li>
+</ul>
+
+<b>Steps to find results</b><br>
+<ul>
+	<li>Extracted the action data for a particular user as well as all the users from db.</li>
+	<li>Click on Button to view/hide all user frequency distribution</li>
+	<li>From the chart it is clear which action is performed most by the user.</li>
+	<li>Oon clicking on the action we can select which action to view in the distribution.</li>
+</ul>
+
+<b>Why does it matter?</b><br>
+<li>To know which action is most common among the users which can be user for user modelling.</li>
+<li>To understand the pattern of variation of actions among the users.</li>
+</p><br><br>
+
+</div><br></div><br><br><br><br>
+<div id="container2" style="margin: 0 auto"></div>
+<div class="hc-pie2" items="main.ideas"></div><br><br><br><br><br>	
+<div id="Answer" style="overflow:scroll; height:300px; width:600px">
+<p ><b>Purpose:</b><br>
+<ul>
+	<li>Display count of actions of different users in an interactive bar chart</li>
+	<li>Display action wise count of all the user</li>
+	<li>Compare action pattern of different Users by selecting users from the bar chart</li>
+
+</ul>
+<b>Analytics</b><br><br>
+From the bar chart, we can compare the action of a particular user with all the users. The chart display count of all the users for different actions like comments, sharing, searching a particular question, upvoting etc. We can also select/deselect a particular user by clicking on the user node.<br> <br>
+
+<b>Interactions</b><br>
+<ul>
+	<li>Hover:  Display the count of a particular action for the user.</li>
+	<li>click: Clicking on username nodes would display the data of only the selected users for the mentioned actions.</li>
+</ul>
+
+<b>Steps to find results</b><br>
+<ul>
+	<li>From the chart it is clear which action is performed most by a particular user.</li>
+	<li>On Hovering the graph any bar in the graph we can note the number of times that user has performed a particular action!!</li>
+	<li>click on the username to view/hide action details of a particulat user</li>
+</ul>
+
+<b>Why does it matter?</b><br>
+<li>To compare interests of different users for the same action with the eaxact count</li>
+<li>To understand the pattern of variation of actions among the users by selecting/deselecting a user.</li>
+<li>Classification of user's engagement on the stack overflow page.</li>
+<li>Use the data for user modeling.</li>
+
+</p><br><br>
+
+<br>

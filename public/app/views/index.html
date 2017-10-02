@@ -12,6 +12,12 @@
     <!--style sheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 
+<!--      <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+ -->
+
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
     
     <!--Angular files -->
@@ -19,6 +25,10 @@
     <script src="assets/js/angular-route.js"></script>
     <script src="app/app.js"></script>
     <script src="app/routes.js"></script>
+<!-- <script src="assets/js/Chart.min.js"></script>
+<script src="assets/js/angular-chart.min.js"></script>
+ -->
+ <script src="http://code.highcharts.com/highcharts.js"></script>
 
     <!--controllers-->
     <script src="app/controllers/userCtrl.js"></script>
@@ -27,10 +37,19 @@
     <!--services-->
     <script src="app/services/userServices.js"></script>
     <script src="app/services/authServices.js"></script>
+   <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+   
 
     <title>Adaptive Web</title>
 
-   
+
   </head>
 
   <body ng-app="userApp" ng-controller="mainCtrl as main">
@@ -54,6 +73,9 @@
             <li><a ng-show="!main.isLoggedin" href="/register" ng-click="main.userInteraction()">Register</a></li>
             <li><a ng-show="main.isLoggedin" href="#" ng-click="main.logout();">Logout</a></li>
             <li><a ng-show="main.isLoggedin" href="/profile">Hello {{main.username}}</a></li>
+            <li><a ng-show="main.isLoggedin" href="/socialModeling">Social Insights</a></li>
+            <li><a ng-show="main.isLoggedin" href="/LoginModel">Login Insights</a></li>
+            
               
           </ul>
         </div><!--/.nav-collapse -->
@@ -67,16 +89,30 @@
         <h2>Welcome</h2>
       </div>
 
-      <div ng-view></div>
-
+      <div ng-view>
+        
+          </div>
+       
+      </div>
 
     </div> 
 
+<script type="text/javascript">
+    window.ChartUtil = (function(){
+      function loadChart(){
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
+        // if(AmCharts){
+        //     console.log("Chart loaded");
+
+        // }
+        // else{
+        //   console.warn("HighCharts not loaded");
+        // }
+      }
+      return {loadChart: loadChart } ;
+    })();  
+</script>
+
 
   </body>
 </html>

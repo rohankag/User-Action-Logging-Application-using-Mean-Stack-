@@ -14,6 +14,10 @@ var app=angular.module('appRoutes',['ngRoute'])
 		templateUrl: 'app/views/pages/about.html'
 	})
 
+    .when('/check',{
+        templateUrl: 'app/views/pages/check.html'
+    })
+
 	.when('/register', {
         templateUrl: 'app/views/pages/users/register.html',
         controller: 'regctrl',
@@ -36,6 +40,17 @@ var app=angular.module('appRoutes',['ngRoute'])
 
     .when('/profile', {
         templateUrl: 'app/views/pages/users/profile.html',
+        authenticated: true
+        
+    })
+
+    .when('/socialModeling', {
+        templateUrl: 'app/views/pages/users/socialModeling.html',
+        authenticated: true
+        
+    })
+    .when('/LoginModel', {
+        templateUrl: 'app/views/pages/users/LoginModel.html',
         authenticated: true
         
     })

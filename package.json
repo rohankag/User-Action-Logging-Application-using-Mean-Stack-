@@ -6,16 +6,17 @@
   "author": "Rohank Agarwal",
   "license": "ISC",
   "engines": {
-	"node": "4.6.0",
-	"npm": "2.15.9"
+    "node": "4.6.0",
+    "npm": "2.15.9"
   },
   "dependencies": {
+    "angular-chart.js": "^1.1.1",
     "bcrypt-nodejs": "*",
     "body-parser": "*",
     "express": "*",
     "jsonwebtoken": "*",
-    "mongoose": "*",
     "mongodb": "*",
+    "mongoose": "*",
     "morgan": "*",
     "socket.io": "*"
   }

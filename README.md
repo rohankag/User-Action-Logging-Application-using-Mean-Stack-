@@ -1,30 +1,28 @@
-Single Page Application using Node.js, Angular.js,Bootstrap, MongoDB and Express.js to log user behaviour on stackoverflow java tag page and display on application.
-
-Chrome Extension to collect logs can be found here: https://github.com/rohankag/Chrome-Extension-to-post-user-action-with-REST-API
-
-
 Link for online execution :  https://rohankasgn1.herokuapp.com/
 
-Requirements
+For Assignment 2:
+All the social visulalizations are under two seperate tabs: social insights and Login Insights.
+Patters are listed on these two pages.
 
-This application requires installation of Node.js and MongoDB prior to running.
+There are two seperate extensions provided in the submission folder for online and offline.
 
-Description
+Steps to verify online:
+1. load online chrome extension and reload
+2. go to https://rohankasgn1.herokuapp.com/
+3. login->go to stack overflow page-> perform actions(upvote,devote,comment,share,search,scroll)
+4. reload the profile page to see action logs.
 
-Installation
+Steps to verify offline:
 
-Install all dependencies in package.json file. This can be done by navigating to the root directory in the command prompt and running the following command: $ npm install
+1. load offline chrome extension and reload
+2. start mongo db server by the command "mongod"->port:27017 (configured in server.js file)
+3. start node app -using the command "nodemon server.js"
+4. go to "localhost:3000"
+5. perform the same steps as online.
 
-Enter MongoDB configuration settings in the server.js file: mongoose.connect....
 
-Installation is complete. Navigate to folder where server.js file is located and enter the following into command prompt:
-
-$ npm start server.js
-
-To run the demo locally, open a browser and go to localhost:3000
-
-License
-
-No license.
+References:
+Mean stack application tutorial by david acosta
+https://www.youtube.com/watch?v=-gd73iczlS8&list=PL3vQyqzqjZ637sWpKvniMCxdqZhnMJC1d
 
 
